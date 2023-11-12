@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/vramk23/infrapub.git
     targetRevision: main
-    path: apps
+    path: infra/clusters/dev/default-apps
   destination:
     server: https://kubernetes.default.svc
     namespace: crossplane

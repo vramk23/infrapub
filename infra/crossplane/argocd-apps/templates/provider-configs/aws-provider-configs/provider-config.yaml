@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/vramk23/infrapub.git
     targetRevision: main
-    path: infra/crossplane/crossplane-config
+    path: infra/crossplane/provider-config
   destination:
     server: https://kubernetes.default.svc
     namespace: crossplane
