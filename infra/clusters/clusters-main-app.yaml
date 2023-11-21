@@ -1,12 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-clusters
+  name: clusters
   namespace: argo-cd
 spec:
   project: default
   source:
-    repoURL: https://github.com/vramk23/infrapub.git
+    repoURL: https://github.com/intelops/capten-templates.git
     targetRevision: HEAD
     path: infra/clusters/argocd-apps
     helm:

@@ -1,1 +1,0 @@
-# Folder to synch crossplane-providers and corresponding controller-configs resources

@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: crossplane-providers
+  name: providers
   namespace: argo-cd
 spec:
   project: default
   source:
-    repoURL: https://github.com/vramk23/infrapub.git
+    repoURL: https://github.com/intelops/capten-templates.git
     targetRevision: main
-    path: infra/crossplane/provider-config
+    path: infra/crossplane/providers
   destination:
     server: https://kubernetes.default.svc
     namespace: crossplane
