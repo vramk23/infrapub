@@ -15,9 +15,6 @@ spec:
   - repoURL: '{{ .repoURL }}'
     targetRevision: {{ .targetRevision }}
     chart: {{ .chart }}
-    helm:
-      valueFiles: 
-      - {{ .appConfigPath }}
   project: {{ $.Values.project }}
   syncPolicy:
     syncOptions:
