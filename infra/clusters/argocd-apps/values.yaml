@@ -20,7 +20,7 @@ compositions:
 
 clusters:
   - name: dev-aws
-    configPath: infra/clusters/dev/cluster-configs
+    configPath: infra/clusters/dev-aws/cluster-configs
     server: https://kubernetes.default.svc
     defaultApps:
     - name: falco
