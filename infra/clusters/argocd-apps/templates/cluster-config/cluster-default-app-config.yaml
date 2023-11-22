@@ -4,11 +4,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .name }}
+  name: {{ $cluster.name }}-{{ .name }}
   namespace: {{ $.Release.Namespace }}
 spec:
   destination:
-    name: ''
+    name: '{{ $cluster.name }}'
     namespace: {{ .namespace }}
     server: '{{ $cluster.server }}'
   sources:
@@ -17,8 +17,7 @@ spec:
     chart: {{ .chart }}
     helm:
       valueFiles: 
-      - values.yaml
-      - $values/{{ .appConfigPath }}
+      - {{ .appConfigPath }}
   - repoURL: '{{ $.Values.source.repoURL }}'
     targetRevision: {{ $.Values.source.targetRevision }}
     ref: values
