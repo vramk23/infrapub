@@ -12,7 +12,7 @@ spec:
     namespace: {{ .namespace }}
     server: '{{ $cluster.server }}'
   source:
-  - repoURL: '{{ .repoURL }}'
+    repoURL: '{{ .repoURL }}'
     targetRevision: {{ .targetRevision }}
     chart: {{ .chart }}
   project: {{ $.Values.project }}
