@@ -8,7 +8,7 @@ metadata:
   namespace: {{ $.Release.Namespace }}
 spec:
   destination:
-    name: '{{ $cluster.name }}'
+    name: ''
     namespace: {{ .namespace }}
     server: '{{ $cluster.server }}'
   source:
