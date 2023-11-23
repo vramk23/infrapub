@@ -11,10 +11,16 @@ spec:
     name: ''
     namespace: {{ .namespace }}
     server: '{{ $cluster.server }}'
-  source:
-    repoURL: '{{ .repoURL }}'
+  sources:
+  - repoURL: '{{ .repoURL }}'
     targetRevision: {{ .targetRevision }}
     chart: {{ .chart }}
+    helm:
+      valueFiles: 
+      - {{ .appConfigPath }}
+  - repoURL: '{{ $.Values.source.repoURL }}'
+    targetRevision: {{ $.Values.source.targetRevision }}
+    ref: values
   project: {{ $.Values.project }}
   syncPolicy:
     syncOptions:
