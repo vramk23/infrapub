@@ -21,5 +21,6 @@ spec:
       - CreateNamespace={{ $.Values.syncPolicy.CreateNamespace }}
     automated:
       prune: {{ $.Values.syncPolicy.automated.prune }}
+---
 {{- end }}
 {{- end }}
