@@ -18,7 +18,7 @@ syncPolicy:
     selfHeal: true
 
 compositions:
-  - name: crossplane-aws-dev-k8s-packages
+  - name: aws-compositions
     path: infra/clusters/compositions/aws
 
 clusters:
