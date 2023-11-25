@@ -21,7 +21,6 @@ compositions:
 clusters:
   - name: dev-aws
     configPath: infra/clusters/dev-aws/cluster-configs
-    server: https://AA5793909359AF5C6BA28783D0C78581.gr7.us-west-2.eks.amazonaws.com
     defaultApps:
     - name: falco
       appConfigPath: infra/clusters/dev-aws/app-configs/default-apps/falco-values.yaml
