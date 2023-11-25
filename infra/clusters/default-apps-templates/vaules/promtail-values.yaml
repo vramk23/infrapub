@@ -2,4 +2,4 @@ config:
   clients:
   - external_labels:
       cluster_name: clustername
-    url: http://loki.azureagent.optimizor.app/api/v1/push
+    url: http://loki.{{.DomainName}}/api/v1/push
