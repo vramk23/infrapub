@@ -23,7 +23,6 @@ compositions:
 
 clusters:
   - name: dev-test
-    configPath: infra/clusters/dev-test/cluster-configs
     defaultApps:
     - name: falco
       appConfigPath: infra/clusters/dev-test/app-configs/default-apps/falco-values.yaml
