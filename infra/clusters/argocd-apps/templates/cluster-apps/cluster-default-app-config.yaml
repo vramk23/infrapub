@@ -18,7 +18,7 @@ spec:
     chart: {{ .chart }}
     helm:
       valueFiles: 
-      - {{ .appConfigPath }}
+      - {{ .vaulesPath }}
   - repoURL: '{{ $.Values.source.repoURL }}'
     targetRevision: {{ $.Values.source.targetRevision }}
     ref: values

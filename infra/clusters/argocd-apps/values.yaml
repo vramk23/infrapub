@@ -25,25 +25,25 @@ clusters:
   - name: dev-test
     defaultApps:
     - name: falco
-      appConfigPath: infra/clusters/app-configs/dev-test/falco-values.yaml
+      vaulesPath: infra/clusters/app-configs/dev-test/falco-values.yaml
       repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
       namespace: devfalco
       chart: falco
       targetRevision: "0.0.1"
     - name: kyverno
-      appConfigPath: infra/clusters/app-configs/dev-test/kyverno-values.yaml
+      vaulesPath: infra/clusters/app-configs/dev-test/kyverno-values.yaml
       repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
       namespace: devkyverno
       chart: kyverno
       targetRevision: "1.0.2"
     - name: prometheus
-      appConfigPath: infra/clusters/app-configs/dev-test/prometheus-values.yaml
+      vaulesPath: infra/clusters/app-configs/dev-test/prometheus-values.yaml
       repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
       namespace: devprometheus
       chart: kube-prometheus-stack
       targetRevision: "1.0.3"
     - name: promtail
-      appConfigPath: infra/clusters/app-configs/dev-test/promtail-values.yaml
+      vaulesPath: infra/clusters/app-configs/dev-test/promtail-values.yaml
       repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
       namespace: devpromtail
       chart: promtail
