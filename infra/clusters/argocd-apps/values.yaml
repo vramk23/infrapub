@@ -1,5 +1,8 @@
 project: default
 
+global:
+  clusterConfigPath: infra/clusters/dev-test/cluster-configs
+
 source:
   repoURL: https://github.com/vramk23/infrapub.git
   targetRevision: main

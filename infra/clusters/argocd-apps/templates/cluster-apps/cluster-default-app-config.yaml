@@ -1,6 +1,7 @@
 {{- range .Values.clusters }}
 {{- $cluster := . }}
 {{- range .defaultApps }}
+{{- if $cluster.server }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -28,5 +29,6 @@ spec:
     automated:
       prune: {{ $.Values.syncPolicy.automated.prune }}
 ---
+{{- end }}
 {{- end }}
 {{- end }}
