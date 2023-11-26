@@ -18,7 +18,8 @@ spec:
     chart: {{ .chart }}
     helm:
       valueFiles: 
-      - {{ .valuesPath }}
+      - values.yaml
+      - $values/{{ .valuesPath }}
   - repoURL: '{{ $.Values.source.repoURL }}'
     targetRevision: {{ $.Values.source.targetRevision }}
     ref: values
