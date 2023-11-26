@@ -1,25 +1,25 @@
 defaultApps:
   - name: falco
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
-    namespace: devfalco
+    namespace: falco
     chart: falco
     targetRevision: "0.0.1"
     vaulesPath: infra/clusters/app-configs/{{.ClusterName}}/promtail-values.yaml
   - name: kyverno
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
-    namespace: devkyverno
+    namespace: kyverno
     chart: kyverno
     targetRevision: "1.0.2"
     vaulesPath: infra/clusters/app-configs/{{.ClusterName}}/promtail-values.yaml
   - name: prometheus
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
-    namespace: devprometheus
+    namespace: observability
     chart: kube-prometheus-stack
     targetRevision: "1.0.3"
     vaulesPath: infra/clusters/app-configs/{{.ClusterName}}/promtail-values.yaml
   - name: promtail
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
-    namespace: devpromtail
+    namespace: observability
     chart: promtail
     targetRevision: "1.0.0"
     vaulesPath: infra/clusters/app-configs/{{.ClusterName}}/promtail-values.yaml

@@ -27,7 +27,7 @@ clusters:
     - name: falco
       valuesPath: infra/clusters/app-configs/dev-test/falco-values.yaml
       repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
-      namespace: devfalco
+      namespace: falco
       chart: falco
       targetRevision: "0.0.1"
 
