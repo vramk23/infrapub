@@ -15,7 +15,7 @@ defaultApps:
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
     namespace: observability
     chart: kube-prometheus-stack
-    targetRevision: "1.0.4"
+    targetRevision: "1.0.7"
     vaulesPath: infra/clusters/app-configs/{{.ClusterName}}/promtail-values.yaml
   - name: promtail
     repoURL: 'https://kube-tarian.github.io/helmrepo-supporting-tools'
