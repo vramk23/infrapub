@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tekton-cluster-tasks
+  name: tekton-pipelines
   namespace: argo-cd
 spec:
   project: default
