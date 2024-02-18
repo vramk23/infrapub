@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: { { $.Values.source.repoURL } }
+    repoURL: https://github.com/vramk23/infrapub.git
     targetRevision: main
-    path: { { $.Values.piplelinePath } }
+    path: cicd/tekton-pipelines
     helm:
       valueFiles:
         - values.yaml
