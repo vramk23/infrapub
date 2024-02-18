@@ -1,25 +1,17 @@
-{{- with .Values.tektonPipelines }}
-{{- range . }}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .name }}
+  name: tekton-cluster-tasks
   namespace: argo-cd
 spec:
-  project: {{ $.Values.project }}
+  project: default
   source:
-    repoURL: {{ $.Values.source.repoURL }}
-    targetRevision: {{ $.Values.source.targetRevision }}
-    path: "{{ $.Values.tektonPath}}/{{ .name}}"
+    repoURL: { { $.Values.source.repoURL } }
+    targetRevision: main
+    path: { { $.Values.piplelinePath } }
     helm:
       valueFiles:
-      - values.yaml
+        - values.yaml
   destination:
-    server: {{ $.Values.destination.server }}
-    namespace: tekton-pipelines
-  syncPolicy:
-    automated:
-      prune: true 
---- 
-{{- end }}
-{{- end }}
+    server: https://kubernetes.default.svc
+    namespace: argo-cd

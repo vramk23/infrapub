@@ -13,4 +13,5 @@ syncPolicy:
     prune: false
     selfHeal: true
 
-tektonPath: cicd/tekton-pipelines
+piplelinePath: cicd/tekton-pipelines
+clusterTasksPath: cicd/tekton-cluster-tasks
