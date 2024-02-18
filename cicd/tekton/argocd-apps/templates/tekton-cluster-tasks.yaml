@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: { { $.Values.source.repoURL } }
     targetRevision: main
-    path: cicd/tekton-cluster-tasks
+    path: { { $.Values.clusterTasksPath } }
     helm:
       valueFiles:
         - values.yaml
